@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Dev<span class="text-gradient">Portfolio</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects" class="active">Work</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem;">Let's Talk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--spacing-lg);">
+                    <h1 class="text-gradient" style="font-size: 3rem; margin-bottom: var(--spacing-sm);">All Projects
+                    </h1>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                        A collection of my work in web development, design systems, and interactive experiences.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Duplicate projects for "more" effect -->
+                    <article class="card project-card">
+                        <div
+                            style="height: 180px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                            Preview Image 1
+                        </div>
+                        <h3 class="project-title">E-Commerce Dashboard</h3>
+                        <p class="project-desc">A high-fidelity analytics dashboard with real-time data visualization
+                            and theme management.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div
+                            style="height: 180px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                            Preview Image 2
+                        </div>
+                        <h3 class="project-title">SaaS Landing Page</h3>
+                        <p class="project-desc">Modern landing page for a startup, focused on conversion optimization
+                            and fast load times.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML/SCSS</span>
+                            <span class="tag">Animation</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div
+                            style="height: 180px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                            Preview Image 3
+                        </div>
+                        <h3 class="project-title">AI Content Generator</h3>
+                        <p class="project-desc">Web app wrapping OpenAI API to generate marketing copy.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">OpenAI</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div
+                            style="height: 180px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                            Preview Image 4
+                        </div>
+                        <h3 class="project-title">Portfolio v1</h3>
+                        <p class="project-desc">My very first portfolio site built with vanilla HTML/CSS.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card">
+                        <div
+                            style="height: 180px; background: rgba(255,255,255,0.05); margin-bottom: 1rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                            Preview Image 5
+                        </div>
+                        <h3 class="project-title">Task Manager CLI</h3>
+                        <p class="project-desc">A command-line tool for managing tasks and todos efficiently.</p>
+                        <div class="project-tags">
+                            <span class="tag">Rust</span>
+                            <span class="tag">CLI</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="border-top: 1px solid rgba(255,255,255,0.05); padding: var(--spacing-md) 0; margin-top: var(--spacing-lg);">
+        <div class="container" style="text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+            <p>&copy; 2025 Creative Developer. Built with passion.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
