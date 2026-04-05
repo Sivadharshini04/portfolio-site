@@ -494,13 +494,13 @@ body {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    padding-left: 30px;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     top: 5px;
     bottom: 0;
     width: 2px;
@@ -510,22 +510,11 @@ body {
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
-    width: 50%;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    padding-right: 40px;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    padding-left: 40px;
 }
 
 .timeline-dot {
     position: absolute;
+    left: -36px;
     top: 5px;
     width: 14px;
     height: 14px;
@@ -534,12 +523,40 @@ body {
     box-shadow: 0 0 0 4px #fce7f3;
 }
 
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -7px;
+/* Zigzag Timeline */
+.timeline.zigzag {
+    padding-left: 0;
+}
+
+.timeline.zigzag::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline.zigzag .timeline-item {
+    width: 50%;
+}
+
+.timeline.zigzag .timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline.zigzag .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 40px;
+}
+
+.timeline.zigzag .timeline-dot {
     left: auto;
 }
 
-.timeline-item:nth-child(even) .timeline-dot {
+.timeline.zigzag .timeline-item:nth-child(odd) .timeline-dot {
+    right: -7px;
+}
+
+.timeline.zigzag .timeline-item:nth-child(even) .timeline-dot {
     left: -7px;
 }
 
@@ -758,16 +775,18 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .timeline {
+    .timeline.zigzag {
         padding-left: 30px;
     }
 
-    .timeline::before {
+    .timeline.zigzag::before {
         left: 0;
         transform: none;
     }
 
-    .timeline-item, .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+    .timeline.zigzag .timeline-item, 
+    .timeline.zigzag .timeline-item:nth-child(odd), 
+    .timeline.zigzag .timeline-item:nth-child(even) {
         width: 100%;
         left: 0;
         padding-left: 30px;
@@ -775,8 +794,8 @@ body {
         text-align: left;
     }
 
-    .timeline-item:nth-child(odd) .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot {
+    .timeline.zigzag .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline.zigzag .timeline-item:nth-child(even) .timeline-dot {
         left: -36px;
         right: auto;
     }
